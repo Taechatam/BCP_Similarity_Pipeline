@@ -5,7 +5,7 @@ import os
 from matplotlib.lines import Line2D
 
 # Load your CSV file
-df = pd.read_csv(r"C:\Workspace\Thesis\coding\Github_test\output5_combined_si\ATCC17978.csv")
+df = pd.read_csv(r"Github_test\output5_combined_si\ATCC17978.csv")
 
 # Define a color map for each sample label
 sample_colors = {
@@ -84,7 +84,7 @@ ax.set_ylim(0, 1.1)
 ax.grid(True, linestyle='--', alpha=0.5)
 plt.tight_layout()
 
-output_dir = r"C:\Workspace\Thesis\coding\Github_test\output6_similarity_plot"
+output_dir = r"Github_test\output6_similarity_plot"
 os.makedirs(output_dir, exist_ok=True)
 plt.savefig(os.path.join(output_dir, 'ATCC17978.png'), dpi=600)
 plt.show()
