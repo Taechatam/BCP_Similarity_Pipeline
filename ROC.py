@@ -12,7 +12,11 @@ LABEL_MAP = {"sensitive": 0, "resistant": 1}
 LABEL_MAP_INV = {v: k for k, v in LABEL_MAP.items()}  # {0: "sensitive", 1: "resistant"}
 
 # Load CSV
-df = pd.read_csv(r"C:\Workspace\Thesis\coding\Github_test\output6_ROC\combined_all_data_ROC.csv")
+df = pd.read_csv(r"Github_test\example_data_for_ROC.csv")
+
+# Output folder
+output_dir = r"Github_test\output6_ROC"
+
 
 # After loading the CSV, validate before proceeding
 assert "sample_profile" in df.columns, "Column 'sample_profile' not found in CSV"
@@ -104,7 +108,6 @@ results = pd.DataFrame({
     "Label_Resistant":   [1],
 })
 
-output_dir = r"C:\Workspace\Thesis\coding\Github_test\output6_ROC"
 os.makedirs(output_dir, exist_ok=True)
 
 
