@@ -51,6 +51,6 @@ else:
 final_df = final_df.drop(columns=['batch', 'group'])
 
 # Save to new CSV
-final_df.to_csv(r"Github_test\output1_downsamp\test_balanced_data_annotate_cell.csv", index=False)
+final_df.to_csv(r"Github_test\output2_downsamp\test_balanced_data_annotate_cell.csv", index=False)
 
 print("Balanced dataset saved!")
