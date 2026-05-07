@@ -8,7 +8,7 @@ RELABEL_DATA = True
 # ---------------------
 
 # Load CSV
-file_path = r"C:\Workspace\Thesis\coding\Github_test\output\TM00_test_data_annotate_cell.csv"
+file_path = r"Github_test\output1_combined_profile\test_data_annotate_cell.csv"
 df = pd.read_csv(file_path)
 
 # Extract batch number (if no number, assign "0")
@@ -51,6 +51,6 @@ else:
 final_df = final_df.drop(columns=['batch', 'group'])
 
 # Save to new CSV
-final_df.to_csv(r"C:\Workspace\Thesis\coding\Github_test\output\TM00_balanced_data_annotate_cell.csv", index=False)
+final_df.to_csv(r"Github_test\output1_downsamp\test_balanced_data_annotate_cell.csv", index=False)
 
 print("Balanced dataset saved!")
