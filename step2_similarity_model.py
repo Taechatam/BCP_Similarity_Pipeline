@@ -153,15 +153,11 @@ def analyze(label_list, file_path, output_path, graph_titile):
 
 
 ## input
-file_path = r"C:\Workspace\Thesis\coding\Github_test\output2"# folder path that contains the csv file of the specific strain and the feature list csv file.
-output_path = r"C:\Workspace\Thesis\coding\Github_test\output3"
+file_path = r"Github_test\output1_combined_profile" # folder path that contains the csv file of the specific strain and the feature list csv file.
+output_path = r"Github_test\output3_clustered"
 graph_title = 'ATCC17978_14f'
-analyze(['CIP','untreated'],file_path, output_path, graph_title)
-# ['CIP1','CIP2','CIP3','CIP4','CIP5','CIP6'], ['untreated1','untreated2','untreated3','untreated4','untreated5','untreated6']
-# 'CIP','untreated'
-#for i in ['CIP1','untreated1','CIP2','untreated2','CIP3','untreated3','CIP4','untreated4','CIP5','untreated5','CIP6','untreated6','CIP7','untreated7','CIP8','untreated8','CIP9','untreated9','CIP10','untreated10','CIP11','untreated11','CIP12','untreated12','CIP13','untreated13','CIP14','untreated14','CIP15','untreated15','CIP16','untreated16','CIP17','untreated17','CIP18','untreated18','CIP19','untreated19','CIP20','untreated20','CIP21','untreated21']:
-#    analyze(['Uninfected', i], file_path, output_path)
-# 'TM01','TM02','TM03','TM04','TM05','TM06'
+analyze(['CIP','untreated'],file_path, output_path, graph_title) # compare group, e.g. ['CIP','untreated'] or ['CIP1','CIP2','CIP3','CIP4','CIP5','CIP6']
+
 plt.show()
 
 
