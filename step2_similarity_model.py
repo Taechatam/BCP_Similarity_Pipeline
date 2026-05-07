@@ -153,7 +153,7 @@ def analyze(label_list, file_path, output_path, graph_titile):
 
 
 ## input
-file_path = r"Github_test\output1_combined_profile" # folder path that contains the csv file of the specific strain and the feature list csv file.
+file_path = r"Github_test\output2_downsamp" # folder path that contains the csv file of the specific strain and the feature list csv file.
 output_path = r"Github_test\output3_clustered"
 graph_title = 'ATCC17978_14f'
 analyze(['CIP','untreated'],file_path, output_path, graph_title) # compare group, e.g. ['CIP','untreated'] or ['CIP1','CIP2','CIP3','CIP4','CIP5','CIP6']
