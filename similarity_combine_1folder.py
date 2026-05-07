@@ -2,12 +2,12 @@ import os
 import pandas as pd
 
 # Set the path to your folder containing the CSVs
-main_folder = r"C:\Workspace\Thesis\coding\Github_test\output4_similarity"
+main_folder = r"Github_test\output4_similarity"
 
 # --- CONFIGURATION FOR OUTPUT ---
 # Set your desired destination folder and the specific CSV file name here
-output_folder = r"C:\Workspace\Thesis\coding\Github_test\output5_combined_si"
-output_filename = "ATCC17978.csv" 
+output_folder = r"Github_test\output5_combined_si"
+output_filename = "ATCC17978_similarity_all.csv" 
 # --------------------------------
 
 # List to hold DataFrames
