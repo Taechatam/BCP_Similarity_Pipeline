@@ -84,6 +84,6 @@ def combine_data(path, output):
 #combine_data()
 
 
-path = r"C:\Workspace\Thesis\coding\Github_test\TM00_cellprofiler"
-output = r"C:\Workspace\Thesis\coding\Github_test\output"
+path = r"Github_test\cellprofiler_data_example"
+output = r"Github_test\output1_combined_profile"
 combine_data(path, output)
