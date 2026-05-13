@@ -37,8 +37,8 @@ Run [`step2_features_model.py`](./step2_features_model.py)
 Run [`step3_similarity_index.py`](./step3_similarity_index.py) to calculate the Similarity Index between treated and untreated samples.
 
 ### 4. ROC Analysis & Thresholding
-Run [`step4_ROC.py`](./step4_ROC.py) 
-*[**Requirement:] Data must follow the format of [`example_data_for_ROC.csv`](./example_data_for_ROC.csv).
-*[**Requirement:] Requires labels for both sensitive and resistant known susceptibility references.
+Run [`step4_ROC.py`](./step4_ROC.py) to determine the optimal diagnostic threshold.
+*[**Requirement:**] Data must follow the format of [`example_data_for_ROC.csv`](./example_data_for_ROC.csv).
+*[**Requirement:**] Requires labels for both sensitive and resistant known susceptibility references.
 
 
