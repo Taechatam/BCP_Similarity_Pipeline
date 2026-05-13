@@ -20,28 +20,25 @@ conda env create -f BCP_environment.yml
 conda activate BCP_env
 ```
 
-## How to Run the Pipeline (Step-by-Step Execution)
+## How to Run the Pipeline
 
-You can execute the entire pipeline directly from your terminal. Below is the complete command sequence for a standard analysis workflow, including optional data preprocessing.
+Execute the core pipeline sequentially from your terminal using the commands below:
 
-### Quick Start Code Sequence
+### 1. Data Preparation
+Run [`step1_DataPreparation.py`](./step1_DataPreparation.py) to aggregate and clean individual CSV outputs from CellProfiler into a single usable dataset.
 
-```bash
-# Initialize and activate the computational environment
-conda activate BCP_env
+### 2. Feature Modeling & Visualization
+Run [`step2_features_model.py`](./step2_features_model.py) 
+*Extracts specific morphological features.
+*Maps data points into Euclidean space.
+*Generates visualizations of the selected feature sets.
 
-# [Optional] Step 0: Down-sample large datasets to handle group size imbalances
-python Downsamp_all.py
+### 3. Similarity Index Calculation
+Run [`step3_similarity_index.py`](./step3_similarity_index.py) to calculate the Similarity Index between treated and untreated samples.
 
-# Step 1: Aggregate and clean CellProfiler CSV outputs
-python step1_DataPreparation.py
+### 4. ROC Analysis & Thresholding
+Run [`step4_ROC.py`](./step4_ROC.py) 
+*[**Requirement:] Data must follow the format of [`example_data_for_ROC.csv`](./example_data_for_ROC.csv).
+*[**Requirement:] Requires labels for both sensitive and resistant known susceptibility references.
 
-# Step 2: Extract morphological features and map to Euclidean space
-python step2_features_model.py
 
-# Step 3: Quantify single-cell phenotypic Similarity Indices
-python step3_similarity_index.py
-
-# Step 4: Construct ROC curves and define diagnostic thresholds
-python step4_ROC.py
-```
