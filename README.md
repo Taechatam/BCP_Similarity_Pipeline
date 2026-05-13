@@ -19,5 +19,27 @@ To ensure all dependencies (such as `pandas`, `scikit-learn`, and `matplotlib`) 
 conda env create -f BCP_environment.yml
 conda activate BCP_env
 
+## How to Run the Pipeline (Step-by-Step Execution)
 
-Utility ScriptsAdditional tools provided for data management:Script / FilePurposeDownsamp_all.pyRandomly down-samples data based on the smallest sample size in the set (run before Step 2).module/downsamp.pyA module for selecting a specific number of randomly sampled data points.similarity_combine_1folder.pyMerges multiple similarity index files into a single master file.similarity_plot.pyVisualizes similarity across different strains, including the option to plot the ROC-calculated threshold line.
+You can execute the entire pipeline directly from your terminal. Below is the complete command sequence for a standard analysis workflow, including optional data preprocessing.
+
+### Quick Start Code Sequence
+
+```bash
+# Initialize and activate the computational environment
+conda activate BCP_env
+
+# [Optional] Step 0: Down-sample large datasets to handle group size imbalances
+python Downsamp_all.py
+
+# Step 1: Aggregate and clean CellProfiler CSV outputs
+python step1_DataPreparation.py
+
+# Step 2: Extract morphological features and map to Euclidean space
+python step2_features_model.py
+
+# Step 3: Quantify single-cell phenotypic Similarity Indices
+python step3_similarity_index.py
+
+# Step 4: Construct ROC curves and define diagnostic thresholds
+python step4_ROC.py
