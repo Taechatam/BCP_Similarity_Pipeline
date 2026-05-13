@@ -29,17 +29,16 @@ Run [`step1_DataPreparation.py`](./step1_DataPreparation.py) to aggregate and cl
 
 ### 2. Feature Modeling & Visualization
 Run [`step2_features_model.py`](./step2_features_model.py) 
-*Extracts specific morphological features.
-*Maps data points into Euclidean space.
-*Generates visualizations of the selected feature sets.
+* Extracts specific morphological features.
+* Maps data points into Euclidean space.
+* Generates visualizations of the selected feature sets.
 
 ### 3. Similarity Index Calculation
 Run [`step3_similarity_index.py`](./step3_similarity_index.py) to calculate the Similarity Index between treated and untreated samples.
 
 ### 4. ROC Analysis & Thresholding
 Run [`step4_ROC.py`](./step4_ROC.py) to determine the optimal diagnostic threshold.
-
-*[**Requirement:**] Data must follow the format of [`example_data_for_ROC.csv`](./example_data_for_ROC.csv).
-*[**Requirement:**] Requires labels for both sensitive and resistant known susceptibility references.
+* [**Requirement:**] Data must follow the format of [`example_data_for_ROC.csv`](./example_data_for_ROC.csv).
+* [**Requirement:**] Requires labels for both sensitive and resistant known susceptibility references.
 
 
