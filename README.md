@@ -16,6 +16,7 @@ Example data files are provided to demonstrate the pipeline requirements. These 
 To ensure all dependencies (such as `pandas`, `scikit-learn`, and `matplotlib`) are correctly installed, use the provided environment file:
 
 ```bash
+conda env create -f BCP_environment.yml
 conda activate BCP_environment
 ```
 
@@ -31,6 +32,7 @@ Run [`step2_features_model.py`](./step2_features_model.py)
 * Extracts specific morphological features.
 * Maps data points into Euclidean space.
 * Generates visualizations of the selected feature sets.
+* *Note: If you have a custom selected features CSV, place it in the same folder as your data.*
 
 ### 3. Similarity Index Calculation
 Run [`step3_similarity_index.py`](./step3_similarity_index.py) to calculate the Similarity Index between treated and untreated samples.
@@ -39,5 +41,15 @@ Run [`step3_similarity_index.py`](./step3_similarity_index.py) to calculate the 
 Run [`step4_ROC.py`](./step4_ROC.py) to determine the optimal diagnostic threshold.
 * [**Requirement:**] Data must follow the format of [`example_data_for_ROC.csv`](./example_data_for_ROC.csv).
 * [**Requirement:**] Requires labels for both sensitive and resistant known susceptibility references.
+
+## Utility Scripts
+Additional tools provided for data management and downstream analysis:
+* [`Downsamp_all.py`](./Downsamp_all.py) - Randomly down-samples data based on the smallest sample size in the set (run before Step 2).
+* [`downsamp.py`](./module/downsamp.py) - A module for selecting a specific number of randomly sampled data points.
+* [`similarity_combine_1folder.py`](./similarity_combine_1folder.py) - Merges multiple similarity index files into a single master file.
+* [`similarity_plot.py`](./similarity_plot.py) - Visualizes similarity across different strains, including the option to plot the ROC-calculated threshold line.
+
+## Customization
+The extracted data and feature selection can be adjusted to fit specific investigations. Users can modify the feature list  to accommodate different imaging parameters or biological contexts.
 
 
