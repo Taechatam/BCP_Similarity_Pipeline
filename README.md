@@ -18,6 +18,7 @@ To ensure all dependencies (such as `pandas`, `scikit-learn`, and `matplotlib`) 
 ```bash
 conda env create -f BCP_environment.yml
 conda activate BCP_env
+```
 
 ## How to Run the Pipeline (Step-by-Step Execution)
 
@@ -43,3 +44,4 @@ python step3_similarity_index.py
 
 # Step 4: Construct ROC curves and define diagnostic thresholds
 python step4_ROC.py
+```
