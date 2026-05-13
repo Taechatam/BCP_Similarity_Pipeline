@@ -16,8 +16,7 @@ Example data files are provided to demonstrate the pipeline requirements. These 
 To ensure all dependencies (such as `pandas`, `scikit-learn`, and `matplotlib`) are correctly installed, use the provided environment file:
 
 ```bash
-conda env create -f BCP_environment.yml
-conda activate BCP_env
+conda activate BCP_environment
 ```
 
 ## How to Run the Pipeline
