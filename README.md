@@ -46,7 +46,7 @@ Run [`step4_ROC.py`](./step4_ROC.py) to determine the optimal diagnostic thresho
 Additional tools provided for data management and downstream analysis:
 * [`Downsamp_all.py`](./Downsamp_all.py) - Randomly down-samples data based on the smallest sample size in the set (run before Step 2).
 * [`downsamp.py`](./module/downsamp.py) - A module for selecting a specific number of randomly sampled data points.
-* [`similarity_combine_1folder.py`](./similarity_combine_1folder.py) - Merges multiple similarity index files into a single master file.
+* [`similarity_combine_1folder.py`](./similarity_combine_1folder.py) - Merges multiple similarity index files into a single master file. (run before plot similarity graph)
 * [`similarity_plot.py`](./similarity_plot.py) - Visualizes similarity across different strains, including the option to plot the ROC-calculated threshold line.
 
 ## Customization
