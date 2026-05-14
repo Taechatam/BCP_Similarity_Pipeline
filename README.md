@@ -1,4 +1,5 @@
 # BCP_Similarity_Pipeline
+*[**Note:**] This GitHub repository serves as the code repository for the associated publication.*
 
 ## Project Summary
 This repository contains the antibiotic susceptibility testing (AST) pipeline developed for morphological analysis of bacterial cells. It is an early-state model designed to determine the degree of morphological changes to predict the susceptibility profile of antibiotic-responsive bacteria, specifically validated on *Acinetobacter baumannii*.
@@ -32,7 +33,7 @@ Run [`step2_features_model.py`](./step2_features_model.py)
 * Extracts specific morphological features.
 * Maps data points into Euclidean space.
 * Generates visualizations of the selected feature sets.
-* *Note: If you have a custom selected features CSV, place it in the same folder as your data.*
+* *[**Note:**] If you have a custom selected features CSV, place it in the same folder as your data.(i.e., structured like [`14_features.csv`](./14_features.csv))*
 
 ### 3. Similarity Index Calculation
 Run [`step3_similarity_index.py`](./step3_similarity_index.py) to calculate the Similarity Index between treated and untreated samples.
@@ -46,7 +47,7 @@ Run [`step4_ROC.py`](./step4_ROC.py) to determine the optimal diagnostic thresho
 Additional tools provided for data management and downstream analysis:
 * [`Downsamp_all.py`](./Downsamp_all.py) - Randomly down-samples data based on the smallest sample size in the set (run before Step 2).
 * [`downsamp.py`](./module/downsamp.py) - A module for selecting a specific number of randomly sampled data points.
-* [`similarity_combine_1folder.py`](./similarity_combine_1folder.py) - Merges multiple similarity index files into a single master file. (run before plot similarity graph)
+* [`similarity_combine_1folder.py`](./similarity_combine_1folder.py) - Merges multiple individual similarity index files from the folder (e.g.,[`output4_similarity/`](./output4_similarity/) ) into a single master file (run before plotting the similarity graph).
 * [`similarity_plot.py`](./similarity_plot.py) - Visualizes similarity across different strains, including the option to plot the ROC-calculated threshold line.
 
 ## Customization
