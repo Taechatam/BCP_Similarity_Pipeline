@@ -24,7 +24,7 @@ conda activate BCP_environment
 ## How to Run the Pipeline
 > ⚠️ **Important Note:** The core pipeline script (`step2`) does not run standalone. It dynamically import foundational functions directly from the [`module/`](./module/) folder. To prevent runtime `ImportError` failures, ensure the `module/` directory remains intact and sits in the same root folder as your execution scripts.
 
-Execute the core pipeline sequentially from your terminal using the commands below:
+An overview of the functional purpose and requirements for each sequential step in the pipeline is detailed below:
 
 ### 1. Data Preparation
 Run [`step1_DataPreparation.py`](./step1_DataPreparation.py) to aggregate and clean individual CSV outputs from CellProfiler into a single usable dataset.
