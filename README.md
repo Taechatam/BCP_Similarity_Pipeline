@@ -2,9 +2,9 @@
 *[**Note:**] This GitHub repository serves as the code repository for the associated publication.*
 
 ## Project Summary
-This repository contains the antibiotic susceptibility testing (AST) pipeline developed for morphological analysis of bacterial cells. It is an early-state model designed to determine the degree of morphological changes to predict the susceptibility profile of antibiotic-responsive bacteria, specifically validated on *Acinetobacter baumannii*.
+This repository contains the antibiotic susceptibility testing (AST) pipeline developed for the morphological analysis of bacterial cells. It is an early-stage model designed to determine the degree of morphological changes to predict the susceptibility profile of bacteria under antibiotic exposure, specifically evaluated as a proof-of-concept on *Acinetobacter baumannii*.
 
-The pipeline leverages single-cell feature extraction to quantify cellular responses and calculate a **Similarity Index** against known profiles to determine resistance or sensitivity.
+The pipeline leverages single-cell feature extraction to quantify cellular responses and calculate a **Similarity Index** that measures the degree of morphological change between untreated and antibiotic-treated conditions to evaluate susceptibility.
 
 ## Available Data
 Example data files are provided to demonstrate the pipeline requirements. These are CSV files containing morphological features extracted via **CellProfiler**.
