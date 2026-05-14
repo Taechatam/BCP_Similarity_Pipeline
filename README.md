@@ -22,6 +22,7 @@ conda activate BCP_environment
 ```
 
 ## How to Run the Pipeline
+> ⚠️ **Important Note:** The core pipeline scripts (`step1` and `step2`) do not run standalone. They dynamically import foundational functions directly from the [`module/`](./module/) folder. To prevent runtime `ImportError` failures, ensure the `module/` directory remains intact and sits in the same root folder as your execution scripts.
 
 Execute the core pipeline sequentially from your terminal using the commands below:
 
