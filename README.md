@@ -1,5 +1,5 @@
 # BCP_Similarity_Pipeline
-*[**Note:**] This GitHub repository serves as the code repository for the associated publication.*
+***Note:** This GitHub repository serves as the code repository for the associated publication.*
 
 ## Project Summary
 This repository contains the antibiotic susceptibility testing (AST) pipeline developed for the morphological analysis of bacterial cells. It is an early-stage model designed to determine the degree of morphological changes to predict the susceptibility profile of bacteria under antibiotic exposure, specifically evaluated as a proof-of-concept on *Acinetobacter baumannii*.
