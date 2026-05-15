@@ -40,8 +40,13 @@ def similarity_index(input_file, output, output_file_name, ref_label, sample_lab
             # print(control_dataset.cluster.value_counts())
 
             similarity_list = []
-            ## random pick 200 data point from combination dataset
-            for unknown_number in np.random.randint(0, len(unknown_data), size=200):
+             rng = np.random.default_rng(seed=42)
+            
+            # Generate 200 unique indices without replacement
+            # (replace=False ensures you don't pick the same row twice)
+            random_indices = rng.choice(len(unknown_data), size=200, replace=False)
+
+            for unknown_number in random_indices:
                 unknow_point = unknown_data.iloc[unknown_number]
 
                 mean_distance_list = []
