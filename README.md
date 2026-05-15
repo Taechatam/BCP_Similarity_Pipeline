@@ -37,7 +37,7 @@ Run [`step2_features_model.py`](./step2_features_model.py)
 * *[**Note:**] If you have a custom selected features CSV, place it in the same folder as your data.(i.e., structured like [`14_features.csv`](./14_features.csv))*
 
 ### 3. Similarity Index Calculation
-Run [`step3_similarity_index.py`](./step3_similarity_index.py) to calculate the Similarity Index between treated and untreated samples.
+Run [`step3_similarity_index.py`](./step3_similarity_index.py) to calculate the Similarity Index between treated and untreated samples. (use `coordinate_file` from step2)
 
 ### 4. ROC Analysis & Thresholding
 Run [`step4_ROC.py`](./step4_ROC.py) to determine the optimal diagnostic threshold.
