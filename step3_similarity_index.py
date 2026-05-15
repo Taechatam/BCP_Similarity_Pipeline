@@ -75,9 +75,9 @@ def similarity_index(input_file, output, output_file_name, ref_label, sample_lab
 
 
 
-coordinate_file = r"C:\Workspace\Thesis\coding\Github_test\output3_clustered\coordinate_ATCC17978_14f.csv"
+coordinate_file = r"C:\Workspace\Thesis\coding\Github_test\output3_clustered\coordinate_test.csv"
 output = r"C:\Workspace\Thesis\coding\Github_test\output4_similarity"
-output_file_name = 'ATCC17978_14f'
+output_file_name = 'test'
 ref_label = ['untreated']
-sample_label = 'CIP'
+sample_label = 'treated'
 similarity_index(coordinate_file, output, output_file_name, ref_label, sample_label)
