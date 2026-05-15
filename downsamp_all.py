@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # --- CONFIGURATION ---
-# Set to True to change "CIP1", "untreated2" to just "CIP" and "untreated"
+# Set to True to change "treated1", "untreated2" to just "treated" and "untreated"
 # Set to False to keep the original labels exactly as they are
 RELABEL_DATA = True 
 # ---------------------
@@ -14,25 +14,25 @@ df = pd.read_csv(file_path)
 # Extract batch number (if no number, assign "0")
 df['batch'] = df['label'].str.extract(r'(\d+)', expand=False).fillna("0")
 
-# Extract group name (CIP or untreated)
+# Extract group name (treated or untreated)
 df['group'] = df['label'].str.extract(r'([A-Za-z]+)')
 
 balanced_data = []
 
 # Iterate over all batches (including batch "0")
 for batch in df['batch'].unique():
-    cip_rows = df[(df['batch'] == batch) & (df['group'] == 'CIP')]
+    treated_rows = df[(df['batch'] == batch) & (df['group'] == 'treated')]
     untreated_rows = df[(df['batch'] == batch) & (df['group'] == 'untreated')]
     
-    if len(cip_rows) > 0 and len(untreated_rows) > 0:
+    if len(treated_rows) > 0 and len(untreated_rows) > 0:
         # Find minimum sample size
-        min_size = min(len(cip_rows), len(untreated_rows))
+        min_size = min(len(treated_rows), len(untreated_rows))
         
         # Randomly sample equal number
-        cip_sample = cip_rows.sample(n=min_size, random_state=42)
+        treated_sample = treated_rows.sample(n=min_size, random_state=42)
         untreated_sample = untreated_rows.sample(n=min_size, random_state=42)
         
-        balanced_data.append(cip_sample)
+        balanced_data.append(treated_sample)
         balanced_data.append(untreated_sample)
 
 # Concatenate all balanced data
